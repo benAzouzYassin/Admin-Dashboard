@@ -8,7 +8,7 @@ import {
 } from "@iconscout/react-unicons";
 import MenuItem from "./MenuItem";
 import { useContext } from "react";
-import { PagesContext } from "../../context/PagesContext";
+import { PagesContext } from "../../../context/PagesContext";
 
 function Menu({ className }) {
   const menuIcons = [
