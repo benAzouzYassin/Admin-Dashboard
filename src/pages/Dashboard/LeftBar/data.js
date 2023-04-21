@@ -18,3 +18,31 @@ export const notificationsData = [
         timePassed: "1 hour ago",
     },
 ];
+export const chartData = {
+    options: {
+        chart: {
+            id: "basic-bar",
+        },
+        xaxis: {
+            categories: [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+            ],
+        },
+        chart: {
+            height: 350,
+            type: "area",
+        },
+    },
+    series: [
+        {
+            name: "ratings",
+            data: [11, 32, 51, 32, 30, 52, 59],
+        },
+    ],
+};
