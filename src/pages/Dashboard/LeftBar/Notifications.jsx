@@ -11,8 +11,14 @@ export const notificationsData = [
   {
     profileImg: "/imgs/img2.png",
     name: "Andrew Thomas",
-    text: "has ordered Apple smart watch 2500mh battery.",
-    timePassed: "60 seconds ago",
+    text: "has received Samsung gadget for charging battery.",
+    timePassed: "30 minutes ago",
+  },
+  {
+    profileImg: "/imgs/img3.png",
+    name: "Andrew Thomas",
+    text: "has ordered Apple smart watch, samsung gear 2500mh battery.",
+    timePassed: "1 hour ago",
   },
 ];
 
@@ -33,22 +39,16 @@ function Notifications() {
 
 function NotificationItem({ profileImg, name, text, timePassed }) {
   return (
-    <div className="bg-neutral-300 mb-2 text-sm flex">
-      <Box
-        className="w-24 h-14"
-        sx={{
-          background: `url(${profileImg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      ></Box>
+    <div className=" mb-3 text-xs flex items-center gap-2">
+      <div className="mt-[-2px]">
+        <img src={`${profileImg}`} width="90" alt="profile image" />
+      </div>
       <div>
-        <p>
-          <span className="font-semibold">{name}</span>
+        <p className="leading-4">
+          <span className="font-semibold">{name} </span>
           {text}
         </p>
-        <p className="pl-5">{timePassed}</p>
+        <p className="mt-1 text-gray-500">{timePassed}</p>
       </div>
     </div>
   );
