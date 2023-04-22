@@ -1,9 +1,17 @@
 import { Box } from "@mui/material";
 import Menu from "./Menu";
+import { UilMultiply } from "@iconscout/react-unicons";
 
-function Sidebar() {
+function Sidebar({ isVisible, toggleSideBar }) {
   return (
-    <Box sx={{ transition: "all 300ms ease" }}>
+    <Box
+      sx={{ transition: "all 300ms ease" }}
+      className={`bg-[#ffe1bc] w-1/2 absolute top-0 z-10  h-[100%] lg:w-auto lg:static lg:block `}
+    >
+      <UilMultiply
+        onClick={toggleSideBar}
+        className="cursor-pointer lg:hidden ml-auto mt-2 mr-2 "
+      />
       <div className="flex pl-6 items-center">
         <Box
           className="w-14 h-14  "
@@ -13,6 +21,7 @@ function Sidebar() {
             backgroundSize: "cover",
           }}
         ></Box>
+
         <p className="text-2xl font-semibold flex ml-2 h-fit items-center">
           Sh<span className="text-[#ff919d]">o</span>ps
         </p>

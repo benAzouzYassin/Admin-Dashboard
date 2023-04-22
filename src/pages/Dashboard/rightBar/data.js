@@ -4,18 +4,21 @@ export const notificationsData = [
         name: "Andrew Thomas",
         text: "has ordered Apple smart watch 2500mh battery.",
         timePassed: "25 seconds ago",
+        id: 1
     },
     {
         profileImg: "/imgs/img2.png",
         name: "Andrew Thomas",
         text: "has received Samsung gadget for charging battery.",
         timePassed: "30 minutes ago",
+        id: 2
     },
     {
         profileImg: "/imgs/img3.png",
         name: "Andrew Thomas",
         text: "has ordered Apple smart watch, samsung gear 2500mh battery.",
         timePassed: "1 hour ago",
+        id: 3
     },
 ];
 export const chartData = {

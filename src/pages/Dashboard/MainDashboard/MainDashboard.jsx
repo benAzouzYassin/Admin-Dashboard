@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { UilBars } from "@iconscout/react-unicons";
 import Card from "./Card";
 import { cardsData } from "./data";
 import ExpandedCard from "./ExpandedCard";
 import RecentOrdersTable from "./RecentOrdersTable";
 
-function MainDashboard() {
+function MainDashboard({ toggleSideBar }) {
   const [activeCard, setActiveCard] = useState(null);
 
   const closedCardsElement = cardsData.map((cardData, index) => (
@@ -13,9 +14,12 @@ function MainDashboard() {
 
   return (
     <div className="relative ">
-      <h1 className="text-4xl font-bold">Dashboard</h1>
+      <div className="flex items-center gap-2  ">
+        <UilBars onClick={toggleSideBar} className="cursor-pointer lg:hidden" />
+        <h1 className="text-4xl font-bold">Dashboard</h1>
+      </div>
       <div className="flex">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full w-[85vw] lg:w-full">
           {closedCardsElement}
         </div>
 

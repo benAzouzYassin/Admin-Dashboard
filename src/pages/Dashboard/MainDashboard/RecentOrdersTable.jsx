@@ -44,64 +44,66 @@ function RecentOrdersTable() {
     console.log("will get details from an api and render them");
   };
   return (
-    <TableContainer component={Paper} className="mt-10">
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>
-              <span className="text-md font-semibold">Product</span>
-            </TableCell>
-            <TableCell>
-              {" "}
-              <span className="text-md font-semibold">Tracking ID</span>
-            </TableCell>
-            <TableCell>
-              {" "}
-              <span className="text-md font-semibold">Date</span>
-            </TableCell>
-            <TableCell>
-              {" "}
-              <span className="text-md font-semibold">Status</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-md font-semibold"> </span>
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.product}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.product}
-              </TableCell>
-              <TableCell> {row.trackingId}</TableCell>
-              <TableCell>{row.date}</TableCell>
+    <Paper className="mt-10 mb-5 w-[85vw] lg:w-[100%] lg:overflow-hidden overflow-scroll">
+      <TableContainer>
+        <Table aria-label="simple table">
+          <TableHead>
+            <TableRow>
               <TableCell>
-                <Typography
-                  className="p-2 w-fit rounded-2xl text-[#27272a]"
-                  sx={{
-                    background: getRowStatusColor(row.status),
-                  }}
-                >
-                  {row.status}
-                </Typography>
+                <span className="text-md font-semibold">Product</span>
               </TableCell>
               <TableCell>
-                <button
-                  onClick={() => getDetails(row.trackingId)}
-                  className="text-md bg-blue-400 p-2 rounded-xl text-white hover:bg-blue-300"
-                >
-                  details
-                </button>
+                {" "}
+                <span className="text-md font-semibold">Tracking ID</span>
+              </TableCell>
+              <TableCell>
+                {" "}
+                <span className="text-md font-semibold">Date</span>
+              </TableCell>
+              <TableCell>
+                {" "}
+                <span className="text-md font-semibold">Status</span>
+              </TableCell>
+              <TableCell>
+                <span className="text-md font-semibold"> </span>
               </TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.product}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.product}
+                </TableCell>
+                <TableCell> {row.trackingId}</TableCell>
+                <TableCell>{row.date}</TableCell>
+                <TableCell>
+                  <Typography
+                    className="p-2 w-fit rounded-2xl text-[#27272a]"
+                    sx={{
+                      background: getRowStatusColor(row.status),
+                    }}
+                  >
+                    {row.status}
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <button
+                    onClick={() => getDetails(row.trackingId)}
+                    className="text-md bg-blue-400 p-2 rounded-xl text-white hover:bg-blue-300"
+                  >
+                    details
+                  </button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Paper>
   );
 }
 
