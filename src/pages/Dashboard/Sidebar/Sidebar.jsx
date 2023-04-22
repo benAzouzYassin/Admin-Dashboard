@@ -6,7 +6,9 @@ function Sidebar({ isVisible, toggleSideBar }) {
   return (
     <Box
       sx={{ transition: "all 300ms ease" }}
-      className={`bg-[#ffe1bc] w-1/2 absolute top-0 z-10  h-[100%] lg:w-auto lg:static lg:block `}
+      className={` ${
+        isVisible ? "left-0" : "left-[-100%]"
+      } w-1/2 absolute top-0 z-10 bg-[#ffd1cf] h-[100%] lg:w-auto lg:static lg:bg-none lg:block `}
     >
       <UilMultiply
         onClick={toggleSideBar}

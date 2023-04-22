@@ -36,6 +36,7 @@
   background-color: var(--glass);
   overflow: visible;
   display: grid;
+  align-items: center;
   grid-template-columns: auto;
   background-color: #917b7e;
 }
