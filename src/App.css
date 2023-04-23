@@ -22,12 +22,7 @@
 .App {
   /* padding: 0.5rem 3.5rem; */
   color: var(--black);
-  background: linear-gradient(
-    106.37deg,
-    #ffe1bc 29.63%,
-    #ffcfd1 51.55%,
-    #f3c6f1 90.85%
-  );
+
   height: 100vh;
 }
 .App__glass {
@@ -39,13 +34,9 @@
   align-items: center;
   grid-template-columns: auto;
   background-color: #917b7e;
+  min-height: 100vh;
 }
-@media (min-width: 1024px) {
-  .App__glass {
-    grid-template-columns: 11rem auto 20rem;
-    background-color: #ffd1cf;
-  }
-}
+
 ::-webkit-scrollbar {
   width: 15px;
   background-color: #ebe6e1;
@@ -65,4 +56,12 @@ slide-out {
 }
 slide-in {
   left: 0%;
+}
+.bg-gradient {
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
 }

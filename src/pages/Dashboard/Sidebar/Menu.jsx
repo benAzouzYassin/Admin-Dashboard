@@ -28,6 +28,7 @@ function Menu({ className }) {
         pageName={pages[index]}
         selectedPage={pagesContext.activePage}
         changeSelected={pagesContext.setActivePage}
+        route="/orders"
       />
     );
   });
