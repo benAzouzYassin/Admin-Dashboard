@@ -4,14 +4,16 @@ import Card from "./Card";
 import { cardsData } from "./data";
 import ExpandedCard from "./ExpandedCard";
 import RecentOrdersTable from "./RecentOrdersTable";
-
+import { useContext } from "react";
+import { PagesContext } from "../../../context/PagesContext";
 function MainDashboard({ toggleSideBar }) {
   const [activeCard, setActiveCard] = useState(null);
 
   const closedCardsElement = cardsData.map((cardData, index) => (
     <Card {...cardData} key={index} id={index} setActiveCard={setActiveCard} />
   ));
-
+  const pagesContext = useContext(PagesContext);
+  pagesContext.setActivePage("Dashboard");
   return (
     <div className="relative ">
       <div className="flex items-center gap-2  ">

@@ -9,8 +9,12 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { rows, columns } from "./data";
 import { UilBars } from "@iconscout/react-unicons";
+import { useContext } from "react";
+import { PagesContext } from "../../context/PagesContext";
 
 function Orders({ toggleSideBar }) {
+  const pagesContext = useContext(PagesContext);
+  pagesContext.setActivePage("Orders");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(25);
 
