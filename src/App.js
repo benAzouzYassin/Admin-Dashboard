@@ -5,8 +5,9 @@ import { PagesContextProvider } from "./context/PagesContext"
 import MainDashboard from './pages/Dashboard/MainDashboard/MainDashboard';
 import RightBar from './pages/Dashboard/rightBar/RightBar';
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Orders from './pages/Orders/Orders';
+import Customers from './pages/Customers/Customers';
 
 function App() {
   const [sidebarVisible, setSidebarVisible] = useState(false)
@@ -23,7 +24,8 @@ function App() {
         <Routes>
           <Route path='/dashboard' element={<><MainDashboard toggleSideBar={toggleSideBar} /><RightBar /></>} />
           <Route path='/' element={<><MainDashboard toggleSideBar={toggleSideBar} /><RightBar /></>} />
-          <Route path='/orders' element={<Orders />} />
+          <Route path='/orders' element={<Orders toggleSideBar={toggleSideBar} />} />
+          <Route path='/customers' element={<Customers toggleSideBar={toggleSideBar} />} />
           <Route path='*' element={<h1>not found</h1>} />
         </Routes>
 
