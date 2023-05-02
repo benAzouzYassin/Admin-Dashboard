@@ -1,6 +1,7 @@
 # React Admin Dashboard
 
-#### An admin dashboard built with React, providing a comprehensive interface for managing [orders/customers/products], for live demo click <a href="https://react-admindashboard123.netlify.app/">here</a>.
+#### An admin dashboard built with React, providing a comprehensive interface for managing [orders/customers/products]. 
+For live demo click <a href="https://react-admin-dashboard123.netlify.app/">here</a>.
 
 
 ## Preview
