@@ -2,7 +2,7 @@ function NotificationItem({ profileImg, name, text, timePassed }) {
   return (
     <div className=" mb-3 text-xs flex items-center gap-2">
       <div className="mt-[-2px]">
-        <img src={`${profileImg}`} width="90" alt="profile image" />
+        <img src={`${profileImg}`} width="90" height="90" alt="profile image" />
       </div>
       <div>
         <p className="leading-4">
